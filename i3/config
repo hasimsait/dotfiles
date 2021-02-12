@@ -5,7 +5,10 @@ set $sup Mod4
 exec_always --no-startup-id xrandr --output HDMI-1 --mode 1920x1080 --rate 60
 # Map CapsLock to Escape
 exec_always --no-startup-id setxkbmap -option caps:escape
+# Display Network Options
+#exec_always --no-startup-id alacritty -e nmtui
 
+font pango:monospace, Font Awesome 8
 font pango:monospace, Font Awesome 8
 # Press mod key to be able to resize floating windows
 floating_modifier $mod
@@ -139,9 +142,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # Finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 new_window pixel 2
 
@@ -183,3 +186,9 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+#bindsym XF86KbdBrightnessUp
+#bindsym XF86KbdBrightnessDown 
+
+
+
